@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&display=swap");
+
+:root {
+  font-family: "Manrope", sans-serif;
+  color: var(--color-text-primary);
+  background: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: dark;
+  --color-background: #08090B;
+  --color-background-secondary: #111318;
+  --color-surface: #171A20;
+  --color-surface-elevated: #20242C;
+  --color-primary: #00D9FF;
+  --color-primary-hover: #6AE8FF;
+  --color-primary-soft: #00A8C4;
+  --color-secondary: #C0C6D0;
+  --color-text-primary: #F5F7FA;
+  --color-text-secondary: #C0C6D0;
+  --color-border: #4B525E;
+  --color-white: #F5F7FA;
+  --color-status-available: #79DBA7;
+  --color-status-error: #FFC7BB;
+  --color-background-rgb: 8 9 11;
+  --color-background-secondary-rgb: 17 19 24;
+  --color-surface-rgb: 23 26 32;
+  --color-surface-elevated-rgb: 32 36 44;
+  --color-primary-rgb: 0 217 255;
+  --color-primary-hover-rgb: 106 232 255;
+  --color-primary-soft-rgb: 0 168 196;
+  --color-secondary-rgb: 192 198 208;
+  --color-text-primary-rgb: 245 247 250;
+  --color-text-secondary-rgb: 192 198 208;
+  --color-border-rgb: 75 82 94;
+  --color-white-rgb: 245 247 250;
+  --color-status-available-rgb: 121 219 167;
+  --color-status-error-rgb: 255 199 187;
+  --accent: var(--color-primary);
+  --accent-deep: var(--color-primary-soft);
+  --cyan: var(--color-secondary);
+  --muted: var(--color-text-secondary);
+  --border: var(--color-border);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 12% 8%, rgb(var(--color-secondary-rgb) / 0.11), transparent 46rem),
+    radial-gradient(ellipse at 84% 17%, rgb(var(--color-primary-rgb) / 0.13), transparent 43rem),
+    radial-gradient(ellipse at 48% 78%, rgb(var(--color-primary-soft-rgb) / 0.09), transparent 52rem),
+    linear-gradient(145deg, var(--color-background) 0%, var(--color-background-secondary) 48%, var(--color-background) 100%);
+  background-attachment: scroll;
+}
+
+button, a { font: inherit; }
+button { color: inherit; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+::selection { background: rgb(var(--color-primary-soft-rgb) / 0.42); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
